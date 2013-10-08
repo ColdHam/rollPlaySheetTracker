@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Roll Play Tracker</title>
+    <link href="lib/kendo/css/kendo.mobile.all.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="characters" data-role="view" data-title="Characters" data-layout="default">
+        Characters Go Here.
+    </div>
+
+    <div id="roller" data-role="view" data-title="Roller" data-layout="default">
+        Dice Roller Here.
+    </div>
+
+    <div id="settings" data-role="view" data-title="Settings" data-layout="default">
+        Settings.
+    </div>
+
+
+    <section data-role="layout" data-id="default">
+        <header data-role="header">
+            <div data-role="navbar">
+                <span data-role="view-title"></span>
+            </div>
+        </header>
+        <!--View content will render here-->
+        <footer data-role="footer">
+            <div data-role="tabstrip">
+                <a data-icon="contacts" href="#characters">Characters</a>
+                <a data-icon="bookmarks" href="#roller">Roller</a>
+                <a data-icon="settings" href="#settings">Settings</a>
+            </div> 
+        </footer>
+    </section>
+
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/kendo/js/kendo.mobile.min.js"></script>
+    <script>
+        var app = new kendo.mobile.Application(document.body, {
+            transition:'slide'
+        });
+    </script>
+</body>
+</html>
